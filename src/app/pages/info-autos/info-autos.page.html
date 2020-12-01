@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defailtHref="tabs-pages/autos"></ion-back-button>
+            <ion-title>{{auto.modelo}}</ion-title>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-segment (ionChange)="onFilter($event)">
+        <ion-segment-button value="interior">Interior</ion-segment-button>
+        <ion-segment-button value="exterior">Exterior</ion-segment-button>
+    </ion-segment>
+
+    <ion-card>
+        <ion-slides pager="true" class="slide-padding">
+            <ion-slide>
+                <ion-img [src]="info[0]"></ion-img>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-img [src]="info[1]"></ion-img>
+            </ion-slide>
+
+        </ion-slides>
+        <ion-card-content [innerHtml]="info[2]" class="ion-text-justify"></ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-title>Informacion Detallada</ion-card-title>
+        <ion-img [src]="auto.imgInfo"></ion-img>
+    </ion-card>
+
+</ion-content>

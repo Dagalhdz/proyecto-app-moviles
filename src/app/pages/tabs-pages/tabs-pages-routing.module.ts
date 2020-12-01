@@ -29,12 +29,6 @@ const routes: Routes = [
       }
     ]
   },
-
-  // {
-  //   path: '',
-  //   redirectTo: 'tabs-pages/autos',
-  //   pathMatch: 'full'
-  // }
 ];
 
 @NgModule({

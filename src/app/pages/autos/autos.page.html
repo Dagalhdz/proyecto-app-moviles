@@ -1,6 +1,27 @@
 <app-header></app-header>
 <ion-content class="ion-padding">
-    <ion-label>
-        <h1>Autos</h1>
-    </ion-label>
+    <ion-segment scrollable (ionChange)="onFilter($event)">
+        <ion-segment-button value="Deportivo">Deportivo</ion-segment-button>
+        <ion-segment-button value="camioneta">Camioneta</ion-segment-button>
+        <ion-segment-button value="electrico">Electrico</ion-segment-button>
+        <ion-segment-button value="comercial">Comercial</ion-segment-button>
+        <ion-segment-button value="familiar">Familiar</ion-segment-button>
+        <ion-segment-button value="Convertible">Convertible</ion-segment-button>
+    </ion-segment>
+
+    <ion-card>
+        <ion-header>
+            <ion-card-title>{{autos.modelo}}</ion-card-title>
+            <ion-card-subtitle>{{autos.marca}}</ion-card-subtitle>
+            <ion-img [src]="autos.imgInicial"></ion-img>
+        </ion-header>
+        <ion-label>Especificaciones: </ion-label>
+        <ion-card-content [innerHTML]="autos.infoGeneral">
+            <!-- {{autos.infoGeneral}} -->
+        </ion-card-content>
+
+        <ion-button color="light" expand="block" fill="outline" (click)="verAuto()">ver mas...</ion-button>
+
+    </ion-card>
+
 </ion-content>

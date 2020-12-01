@@ -11,27 +11,10 @@ const routes: Routes = [
     redirectTo: 'tabs-pages/autos',
     pathMatch: 'full'
   },
-  // {
-  //   path: 'header',
-  //   loadChildren: () => import('./pages/header/header.module').then( m => m.HeaderPageModule)
-  // },
-
-  // {
-  //   path: 'autos',
-  //   loadChildren: () => import('./pages/autos/autos.module').then( m => m.AutosPageModule)
-  // },
-  // {
-  //   path: 'mapa',
-  //   loadChildren: () => import('./pages/mapa/mapa.module').then( m => m.MapaPageModule)
-  // },
-  // {
-  //   path: 'info',
-  //   loadChildren: () => import('./pages/info/info.module').then( m => m.InfoPageModule)
-  // },
-  // {
-  //   path: 'cambio-auto',
-  //   loadChildren: () => import('./pages/cambio-auto/cambio-auto.module').then( m => m.CambioAutoPageModule)
-  // }
+  {
+    path: 'info-auto/:id',
+    loadChildren: () => import('./pages/info-autos/info-autos.module').then( m => m.InfoAutosPageModule)
+  },
 ];
 
 @NgModule({
