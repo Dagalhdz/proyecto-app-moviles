@@ -1,21 +1,15 @@
 import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator/ngx';
 import { LoadingController } from '@ionic/angular';
-import { Geolocation } from "@ionic-native/geolocation/ngx";
 import { Component, OnInit } from "@angular/core";
 import {
   GoogleMaps,
   GoogleMap,
-  GoogleMapsEvent,
   GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
   Marker,
   MyLocation,
   GoogleMapsAnimation,
-  LatLng,
 } from "@ionic-native/google-maps";
 
-declare var google;
 
 @Component({
   selector: "app-mapa",
@@ -28,7 +22,6 @@ export class MapaPage implements OnInit {
 
   constructor(
     private googleMaps: GoogleMaps,
-    private geolocation: Geolocation,
     private loadingCtrl: LoadingController,
     private launchNvgt: LaunchNavigator,
   ) {}
