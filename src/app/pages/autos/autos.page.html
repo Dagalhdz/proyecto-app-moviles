@@ -10,17 +10,17 @@
     </ion-segment>
 
     <ion-card>
-        <ion-header>
+        <ion-card-header>
             <ion-card-title>{{autos.modelo}}</ion-card-title>
             <ion-card-subtitle>{{autos.marca}}</ion-card-subtitle>
             <ion-img [src]="autos.imgInicial"></ion-img>
-        </ion-header>
-        <ion-label>Especificaciones: </ion-label>
+        </ion-card-header>
+        <ion-label class="ion-padding">Especificaciones: </ion-label>
         <ion-card-content [innerHTML]="autos.infoGeneral">
             <!-- {{autos.infoGeneral}} -->
         </ion-card-content>
 
-        <ion-button color="light" expand="block" fill="outline" (click)="verAuto()">ver mas...</ion-button>
+        <ion-button color="dark" expand="block" fill="outline" (click)="verAuto()">ver mas...</ion-button>
 
     </ion-card>
 

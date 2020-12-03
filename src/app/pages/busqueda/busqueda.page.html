@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defailtHref="tabs-pages/autos"></ion-back-button>
+        </ion-buttons>
+        <ion-item color="light">
+            <ion-label position="floating">Buscar Auto</ion-label>
+            <ion-input (keyup.enter)="buscarAuto(buscarTexto.value)" #buscarTexto></ion-input>
+        </ion-item>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+    <div *ngIf="control">
+        <ion-card *ngFor="let auto of autos">
+            <ion-card-header>
+                <ion-card-title>{{auto.modelo}}</ion-card-title>
+                <ion-card-subtitle>{{auto.marca}}</ion-card-subtitle>
+                <ion-img [src]="auto.imgInicial"></ion-img>
+            </ion-card-header>
+            <ion-label>Especificaciones: </ion-label>
+            <ion-card-content [innerHTML]="auto.infoGeneral">
+                <!-- {{autos.infoGeneral}} -->
+            </ion-card-content>
+
+            <ion-button color="dark" expand="block" fill="outline" (click)="verAuto(auto.id)">ver mas...</ion-button>
+        </ion-card>
+
+    </div>
+
+</ion-content>

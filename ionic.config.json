@@ -1,7 +1,10 @@
 {
   "name": "proyecto-app-moviles",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {
+      "enabled": false
+    }
   },
   "type": "angular"
 }

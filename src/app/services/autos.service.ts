@@ -130,4 +130,17 @@ export class AutosService {
     return autoArr;
   }
 
+  public buscarAuto(cadena: string){
+    let autoArr: Auto[] = [];
+    cadena = cadena.toLocaleLowerCase();
+    for (let index = 0; index < this._auto.length; index++){
+      let auto = this._auto[index];
+      let modelo  = auto.modelo.toLocaleLowerCase();
+      if(modelo.indexOf(cadena) >= 0) {
+        autoArr.push(auto);
+      }
+    }
+    return autoArr;    
+  }
+
 }

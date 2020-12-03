@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'info-auto/:id',
     loadChildren: () => import('./pages/info-autos/info-autos.module').then( m => m.InfoAutosPageModule)
   },
+  {
+    path: 'busqueda',
+    loadChildren: () => import('./pages/busqueda/busqueda.module').then( m => m.BusquedaPageModule)
+  },
 ];
 
 @NgModule({
