@@ -3,11 +3,6 @@
         <ion-buttons slot="start">
             <ion-back-button defailtHref="tabs-pages/autos"></ion-back-button>
         </ion-buttons>
-        <ion-buttons slot="primary">
-            <ion-button (click)="onPlay()" slot="icon-slot">
-                <ion-icon name="videocam-outline"></ion-icon>
-            </ion-button>
-        </ion-buttons>
         <ion-title>{{auto.modelo}}</ion-title>
     </ion-toolbar>
 </ion-header>
@@ -37,4 +32,11 @@
         <ion-img [src]="auto.imgInfo"></ion-img>
     </ion-card>
 
+    <ion-list>
+        <h3>Video Promocional</h3>
+        <hr>
+        <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;">
+            <video [src]="auto.video" controls style="width: 100%;"></video>
+        </div>
+    </ion-list>
 </ion-content>

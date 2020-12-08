@@ -3,7 +3,6 @@ import { AutosService } from "./../../services/autos.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Auto } from "../../interfaces/auto.model";
-import { VideoPlayer } from "@ionic-native/video-player/ngx";
 
 @Component({
   selector: "app-info-autos",
@@ -17,7 +16,6 @@ export class InfoAutosPage implements OnInit {
   constructor(
     private _autoService: AutosService,
     private activatedRoute: ActivatedRoute,
-    private videoPlayer: VideoPlayer
   ) {
     this.activatedRoute.params.subscribe((params) => {
       // console.log(params["id"] - 1);
@@ -48,17 +46,5 @@ export class InfoAutosPage implements OnInit {
         this.auto.infoExterior,
       ];
     }
-  }
-
-  onPlay() {
-    // console.log('PlayVideo')
-    this.videoPlayer
-      .play('http://static.videogular.com/assets/videos/elephants-dream.mp4')
-      .then(() => {
-        console.log("video completed");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
   }
 }

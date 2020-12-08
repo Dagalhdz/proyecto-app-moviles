@@ -33,6 +33,7 @@
     "@ionic/angular": "^5.0.0",
     "cordova-android": "9.0.0",
     "cordova-plugin-googlemaps": "^2.7.1",
+    "cordova-support-google-services": "1.4.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -49,6 +50,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "cordova-android-support-gradle-release": "^3.0.1",
     "cordova-browser": "^6.0.0",
     "cordova-plugin-actionsheet": "^2.3.3",
     "cordova-plugin-add-swift-support": "^2.0.2",
@@ -103,7 +105,11 @@
       },
       "uk.co.workingedge.phonegap.plugin.launchnavigator": {},
       "cordova-plugin-androidx-adapter": {},
-      "cordova-plugin-androidx": {}
+      "cordova-plugin-androidx": {},
+      "cordova-android-support-gradle-release": {
+        "ANDROID_SUPPORT_VERSION": "27.+"
+      },
+      "cordova-support-google-services": {}
     },
     "platforms": [
       "windows",
