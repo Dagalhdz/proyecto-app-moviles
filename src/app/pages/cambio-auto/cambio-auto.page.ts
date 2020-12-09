@@ -31,6 +31,6 @@ export class CambioAutoPage implements OnInit {
 
   onEnviar(){
     console.log('Enviado');
-    alert("Se han enviado correctamenta");
+    alert("Se han enviado correctamente");
   }
 }

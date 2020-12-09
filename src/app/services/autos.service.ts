@@ -11,7 +11,7 @@ export class AutosService {
       id: 1,
       modelo: 'Mustang 2020',
       imgInicial:'../assets/img/completo/mustang-2020.jpg',
-      marca: 'Ferrari',
+      marca: 'Ford',
       tipo:'deportivo',
       infoGeneral: '•	Transmisión Automática de 10 Velocidades o Manual de 6 Velocidades <br>•	Sistema de Inyección Directa Dual (PDFI) •	5 Modos de Manejo: Normal, Sport, Nieve/Lluvia, Pista y Pista de Carreras<br>•	Suspensión Traseraa Independiente <br> •	Sistema de Frenos Eléctrico de Disco Ventilados<br>•	Sistema de Monitoreo de Presión de Llantas<br>•	Escape Doble con 4 Salidas<br>•	Spoiler Trasero<br>•	Luces Traseras Secuenciales LED<br>•	Luces Direccionales LED<br>•	Faros Delanteros LED de Alta Intensidad<br>•	Faros de Niebla Frontales LED<br>',
       imgInfo: '../assets/img/info/Mustang.png',

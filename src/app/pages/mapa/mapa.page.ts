@@ -32,7 +32,7 @@ export class MapaPage implements AfterViewInit {
     let opcionesMapa: GoogleMapOptions = {
       controls: {
         compass: true,
-        myLocationButton: true,
+        myLocationButton: false,
         zoom: true,
       },
       camera: {
@@ -47,7 +47,7 @@ export class MapaPage implements AfterViewInit {
     this.map = this.googleMaps.create('map-canvas', opcionesMapa);
 
     let markerOptions: MarkerOptions = {
-      title: 'Audio Visual',
+      title: 'Auto Visual',
       animation: 'DROP',
       position: {
         lat: 25.685700652073553,
@@ -70,7 +70,7 @@ export class MapaPage implements AfterViewInit {
         tilt: 30
       });
       let options: MarkerOptions = {
-        title: 'Audio Visual',
+        title: 'Auto Visual',
         animation: 'DROP',
         position: {
           lat: 25.685700652073553,
